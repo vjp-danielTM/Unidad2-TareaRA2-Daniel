@@ -30,13 +30,13 @@ Por tanto, **solo aplican los controles de Nivel 1** de los capítulos solicitad
   - **V5 – Validación de entrada y codificación de salida**  
   - **V10 – Código malicioso**
 
-![Foto de validinputs](https://raw.githubusercontent.com/vjp-danielTM/ComprobacionRequisitosAplicacion_Daniel_Trujillo/refs/heads/main/capturas/1.png)
+![Foto de validinputs](https://raw.githubusercontent.com/vjp-danielTM/Unidad2-TareaRA2-Daniel/refs/heads/main/docs/capturas_comprobacion_de_requisitos/1.png)
 
 
-![Foto de validinputs](https://raw.githubusercontent.com/vjp-danielTM/ComprobacionRequisitosAplicacion_Daniel_Trujillo/refs/heads/main/capturas/2.png)
+![Foto de validinputs](https://raw.githubusercontent.com/vjp-danielTM/Unidad2-TareaRA2-Daniel/refs/heads/main/docs/capturas_comprobacion_de_requisitos/2.png)
 
 
-![Foto de validinputs](https://raw.githubusercontent.com/vjp-danielTM/ComprobacionRequisitosAplicacion_Daniel_Trujillo/refs/heads/main/capturas/3.png)
+![Foto de validinputs](https://raw.githubusercontent.com/vjp-danielTM/Unidad2-TareaRA2-Daniel/refs/heads/main/docs/capturas_comprobacion_de_requisitos/3.png)
 
 
 ### Resumen de cumplimientos encontrados
@@ -50,7 +50,7 @@ Por tanto, **solo aplican los controles de Nivel 1** de los capítulos solicitad
 | 5.5.2     | 1     | Not Applicable | No se procesa XML en ningún momento                                             | No aplica              |
 | 5.5.3     | 1     | Not Applicable | No se deserializa datos no confiables (solo booleanos internos)                 | No aplica              |
 
-![Foto de Maliciuscode](https://raw.githubusercontent.com/vjp-danielTM/ComprobacionRequisitosAplicacion_Daniel_Trujillo/refs/heads/main/capturas/4.png)
+![Foto de Maliciuscode](https://raw.githubusercontent.com/vjp-danielTM/Unidad2-TareaRA2-Daniel/refs/heads/main/docs/capturas_comprobacion_de_requisitos/4.png)
 
 
 **Capítulo V10 – Malicious Code**  
