@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Comprobacion de requisitos de aplicacion - UNIDAD2 Tarea Final DANIEL TRUJILLO</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">UNIDAD2 Tarea Final DANIEL TRUJILLO</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../TrazadoVulnerabilidadGoAnywhere/" class="nav-link">Trazado de vulnerabilidad</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../MaquinaVulnerable/" class="nav-link">Maquina Vulnerable</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Comprobacion de requisitos de aplicacion</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Conclusiones_Daniel/" class="nav-link">Conclusiones</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../MaquinaVulnerable/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Conclusiones_Daniel/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#comprobacion-de-requisitos-de-seguridad-de-la-aplicacion" class="nav-link">Comprobación de Requisitos de Seguridad de la Aplicación</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#1-nivel-de-seguridad-requerido-por-la-aplicacion" class="nav-link">1. Nivel de seguridad requerido por la aplicación</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#2-hoja-de-calculo-asvs-completada" class="nav-link">2. Hoja de cálculo ASVS completada</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#5-reflexion-valoracion-personal-del-estandar-owasp-asvs" class="nav-link">5. Reflexión / valoración personal del estándar OWASP ASVS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="comprobacion-de-requisitos-de-seguridad-de-la-aplicacion">Comprobación de Requisitos de Seguridad de la Aplicación</h1>
+<h2 id="1-nivel-de-seguridad-requerido-por-la-aplicacion">1. Nivel de seguridad requerido por la aplicación</h2>
+<p>La aplicación analizada es un <strong>simulador de túnel de lavado de coches</strong> implementado en Python puro (sin frameworks web, sin base de datos, sin API, sin autenticación, sin manejo de ficheros subidos por usuario, sin red, sin persistencia de datos sensibles).</p>
+<p><strong>Características principales de la aplicación:</strong>
+- Solo dos ficheros: <code>lavadero.py</code> y <code>main_app.py</code>
+- Interfaz de consola (print/input no se usa, solo prints de simulación)
+- Parámetros de entrada: solo booleanos hardcodeados en ejemplos (prelavado, secado_mano, encerado)
+- No hay entrada de usuario real ni datos sensibles
+- No hay conexiones externas, sesiones, usuarios, logs persistentes ni almacenamiento</p>
+<p><strong>Nivel ASVS recomendado: Nivel 1 (Básico)</strong></p>
+<p><strong>Justificación:</strong>
+- No procesa datos personales, financieros ni sanitarios
+- No expuesta a internet ni a usuarios no confiables
+- No hay superficie de ataque significativa (sin HTTP, sin formularios, sin uploads, sin JSON/XML de terceros)
+- Los únicos riesgos son errores lógicos internos (ya controlados con excepciones)
+- No requiere criptografía, gestión de sesiones, control de acceso avanzado ni protección contra ataques web</p>
+<p>Por tanto, <strong>solo aplican los controles de Nivel 1</strong> de los capítulos solicitados (Validación de entrada y Código malicioso). Los controles de Nivel 2 y 3 no son relevantes para esta aplicación.</p>
+<h2 id="2-hoja-de-calculo-asvs-completada">2. Hoja de cálculo ASVS completada</h2>
+<ul>
+<li>Nombre del archivo entregado: <code>ASVS-Checklist-Daniel.ods</code></li>
+<li>Versión utilizada: OWASP ASVS 4.0.3 checklist</li>
+<li>Capítulos rellenados:  </li>
+<li><strong>V5 – Validación de entrada y codificación de salida</strong>  </li>
+<li><strong>V10 – Código malicioso</strong></li>
+</ul>
+<p><img alt="Foto de validinputs" src="https://raw.githubusercontent.com/vjp-danielTM/Unidad2-TareaRA2-Daniel/refs/heads/main/docs/capturas_comprobacion_de_requisitos/1.png" /></p>
+<p><img alt="Foto de validinputs" src="https://raw.githubusercontent.com/vjp-danielTM/Unidad2-TareaRA2-Daniel/refs/heads/main/docs/capturas_comprobacion_de_requisitos/2.png" /></p>
+<p><img alt="Foto de validinputs" src="https://raw.githubusercontent.com/vjp-danielTM/Unidad2-TareaRA2-Daniel/refs/heads/main/docs/capturas_comprobacion_de_requisitos/3.png" /></p>
+<h3 id="resumen-de-cumplimientos-encontrados">Resumen de cumplimientos encontrados</h3>
+<p><strong>Capítulo V5 – Input Validation</strong><br />
+| Requisito | Nivel | Estado     | Comentario breve                                                                 | Archivo referencia     |
+|-----------|-------|------------|----------------------------------------------------------------------------------|------------------------|
+| 5.1.1     | 1     | Non-valid  | No hay gestión de parámetros HTTP ni protección contra parameter pollution       | No aplica              |
+| 5.1.2     | 1     | Valid      | No existe mass assignment; los atributos se asignan explícitamente               | lavadero.py            |
+| 5.1.3     | 1     | Non-valid  | No se realiza validación positiva de entradas (aunque no hay entradas reales)    | No aplica              |
+| 5.5.2     | 1     | Not Applicable | No se procesa XML en ningún momento                                             | No aplica              |
+| 5.5.3     | 1     | Not Applicable | No se deserializa datos no confiables (solo booleanos internos)                 | No aplica              |</p>
+<p><img alt="Foto de Maliciuscode" src="https://raw.githubusercontent.com/vjp-danielTM/Unidad2-TareaRA2-Daniel/refs/heads/main/docs/capturas_comprobacion_de_requisitos/4.png" /></p>
+<p><strong>Capítulo V10 – Malicious Code</strong><br />
+| Requisito | Nivel | Estado         | Comentario breve                                                                 | Archivo referencia     |
+|-----------|-------|----------------|----------------------------------------------------------------------------------|------------------------|
+| 10.1.1    | 3     | Not Applicable | No se usa herramienta de análisis de código malicioso (nivel 3 no aplica)        | —                      |
+| 10.2.1    | 2     | Not Applicable | No hay phone-home ni recolección de datos en la aplicación                       | —                      |
+| 10.2.3    | 3     | Not Applicable | No existen backdoors, cuentas hardcodeadas ni ofuscación                         | lavadero.py / main_app.py |
+| 10.3.1    | 1     | Non-valid      | No existe mecanismo de auto-update firmado (no aplica porque no hay updates)     | —                      |
+| 10.3.2    | 1     | Not Applicable | No se carga código dinámico desde fuentes no confiables                           | —                      |</p>
+<h2 id="5-reflexion-valoracion-personal-del-estandar-owasp-asvs">5. Reflexión / valoración personal del estándar OWASP ASVS</h2>
+<p>Después de aplicar OWASP ASVS a mi simulador de lavadero de coches, aquí va mi valoración personal:</p>
+<p><strong>Puntos positivos:</strong></p>
+<ul>
+<li>Es el estándar más completo y aceptado internacionalmente para verificar la seguridad de aplicaciones.</li>
+<li>Está muy bien estructurado con los tres niveles claros, lo que facilita entender qué controles son obligatorios según el riesgo.</li>
+<li>Cubre de forma exhaustiva desde la arquitectura y el ciclo de desarrollo seguro hasta detalles concretos como configuración HTTP, criptografía o logging.</li>
+<li>Obliga a pensar en seguridad desde el diseño, lo que me parece muy valioso para cualquier proyecto serio.</li>
+</ul>
+<p><strong>Puntos negativos / limitaciones en este caso:</strong></p>
+<ul>
+<li>Está fuertemente orientado a aplicaciones web, por lo que gran parte de los controles no tienen sentido en una aplicación de consola como la mía.</li>
+<li>Para scripts locales, herramientas internas, simuladores educativos o aplicaciones batch la inmensa mayoría de los requisitos simplemente no aplican.</li>
+<li>El porcentaje de cobertura muy bajo puede dar una falsa sensación de que la aplicación es insegura, cuando en realidad es segura precisamente por su simplicidad y por no tener superficie de ataque expuesta.</li>
+<li>Rellenar la hoja completa manualmente lleva muchísimo tiempo; es mucho más práctico usar OWASP Security Knowledge Framework para generar solo los controles relevantes según el tipo de proyecto y nivel elegido.</li>
+</ul>
+<p><strong>Conclusión personal:</strong></p>
+<p>OWASP ASVS es excelente para aplicaciones web, APIs, móviles o sistemas de tamaño medio o grande con usuarios reales y exposición a internet.<br />
+En mi caso, para un proyecto pequeño y educativo como este simulador de lavadero hecho en Python puro, sirve mucho más como herramienta de aprendizaje que como una lista de verificación estricta que haya que cumplir al cien por cien.  </p>
+<p>Lo más valioso de esta actividad ha sido entender por qué la gran mayoría de controles no aplican a mi aplicación. Esto me ha reforzado la idea clave de que la seguridad debe ser proporcional al riesgo real de la aplicación: no todas las apps necesitan el mismo nivel de protección, y forzar controles innecesarios solo añade complejidad sin beneficio.</p>
+<h3 id="enlace-al-excel">Enlace al excel</h3>
+<p><a href="https://github.com/vjp-danielTM/ComprobacionRequisitosAplicacion_Daniel_Trujillo/blob/main/ASVS-checklist-en-DanielTrujilloMartin.ods">Excel Daniel</a></p>
+<h4 id="autor">Autor</h4>
+<blockquote>
+<p><strong><em>Daniel Trujillo Martin</em></strong></p>
+</blockquote></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

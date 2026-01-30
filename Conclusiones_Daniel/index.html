@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Conclusiones - UNIDAD2 Tarea Final DANIEL TRUJILLO</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">UNIDAD2 Tarea Final DANIEL TRUJILLO</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../TrazadoVulnerabilidadGoAnywhere/" class="nav-link">Trazado de vulnerabilidad</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../MaquinaVulnerable/" class="nav-link">Maquina Vulnerable</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../ComprobacionRequisitosAplicacion_Daniel/" class="nav-link">Comprobacion de requisitos de aplicacion</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Conclusiones</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../ComprobacionRequisitosAplicacion_Daniel/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#apartado-4-reflexion-sobre-los-riesgos-de-las-aplicaciones" class="nav-link">Apartado 4 - Reflexión sobre los riesgos de las aplicaciones</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#introduccion" class="nav-link">Introducción</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#riesgos-de-la-aplicacion-simulador-de-lavadero-de-coches" class="nav-link">Riesgos de la aplicación simulador de lavadero de coches</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#comparacion-con-otros-tipos-de-aplicaciones" class="nav-link">Comparación con otros tipos de aplicaciones</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#conclusion-personal" class="nav-link">Conclusión personal</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="apartado-4-reflexion-sobre-los-riesgos-de-las-aplicaciones">Apartado 4 - Reflexión sobre los riesgos de las aplicaciones</h1>
+<h2 id="introduccion">Introducción</h2>
+<p>En esta reflexión personal analizo los riesgos de seguridad asociados a la aplicación que hemos utilizado en el apartado anterior: un simulador de túnel de lavado de coches implementado en Python con los archivos <code>lavadero.py</code> y <code>main_app.py</code>. Se trata de una aplicación simple de consola, sin interfaz web, sin manejo de datos reales de usuarios y sin conexiones externas. A partir de ahí comparo estos riesgos con los de otros tipos de aplicaciones más complejas, como las bancarias, de salud o de redes sociales, para destacar cómo los riesgos dependen directamente de las características de cada aplicación.</p>
+<p>Esta reflexión surge de lo aprendido al aplicar OWASP ASVS en la actividad anterior, donde vi que la mayoría de controles de seguridad no aplicaban a mi app precisamente por su simplicidad.</p>
+<h2 id="riesgos-de-la-aplicacion-simulador-de-lavadero-de-coches">Riesgos de la aplicación simulador de lavadero de coches</h2>
+<p>Mi aplicación es un script Python puro que simula fases de lavado con parámetros booleanos hardcodeados (prelavado, secado a mano, encerado). No interactúa con usuarios reales, no almacena datos, no usa redes ni depende de bibliotecas externas vulnerables. Por tanto sus riesgos son mínimos y principalmente internos o teóricos:</p>
+<ul>
+<li>
+<p><strong>Riesgos lógicos internos</strong><br />
+  Podría haber errores en la lógica de negocio, como un bucle infinito en las fases (aunque lo controlo con contadores) o excepciones no manejadas que hagan fallar el programa. Esto no es un riesgo de seguridad real, sino de estabilidad. En ASVS se relaciona con controles de "Business Logic" (V11), pero en mi caso no aplica porque no hay transacciones reales.</p>
+</li>
+<li>
+<p><strong>Ausencia de riesgos externos</strong><br />
+  No hay inyecciones SQL, XSS ni CSRF porque no hay entradas de usuario ni web. No hay fugas de datos porque no se manejan datos sensibles. No hay riesgos de autenticación ni sesiones porque no hay usuarios. En el análisis ASVS, la mayoría de capítulos (Autenticación, Sesión, Criptografía…) quedaron como "Not Applicable" por esta razón.</p>
+</li>
+<li>
+<p><strong>Riesgos potenciales si se expande</strong><br />
+  Si la convirtiera en una aplicación web (por ejemplo con Flask), aparecerían riesgos como validación de entradas insuficiente (V5 en ASVS), que podrían llevar a inyecciones o denegación de servicio. Pero en su estado actual el riesgo es casi nulo: es segura por su diseño minimalista.</p>
+</li>
+</ul>
+<p>Los riesgos son bajos porque la app es offline, local y sin datos sensibles. No expone superficie de ataque, por lo que no necesita altos niveles de ASVS (quedé en Nivel 1 con baja cobertura, pero sin vulnerabilidades reales).</p>
+<h2 id="comparacion-con-otros-tipos-de-aplicaciones">Comparación con otros tipos de aplicaciones</h2>
+<p>Los riesgos no son universales; dependen de las características de cada aplicación. A continuación comparo con tres tipos muy diferentes:</p>
+<h3 id="aplicaciones-bancarias">Aplicaciones bancarias</h3>
+<ul>
+<li>
+<p><strong>Características clave</strong><br />
+  Manejan datos financieros (cuentas, transacciones, saldos), requieren autenticación fuerte (MFA), conexiones seguras (TLS), integración con APIs externas y cumplimiento normativo (PSD2, PCI-DSS).</p>
+</li>
+<li>
+<p><strong>Riesgos principales</strong><br />
+  Muy altos. Incluyen robo de credenciales (phishing, credential stuffing), fraude en transacciones (man-in-the-middle), inyecciones en APIs (SQLi), ransomware que bloquee accesos o lavado de dinero mediante exploits en lógica de negocio. Un breach puede causar pérdidas económicas directas y daños reputacionales graves.</p>
+</li>
+</ul>
+<h3 id="aplicaciones-de-salud-historial-medico-telemedicina">Aplicaciones de salud (historial médico, telemedicina)</h3>
+<ul>
+<li>
+<p><strong>Características clave</strong><br />
+  Procesan datos sanitarios sensibles (diagnósticos, historial clínico, recetas), cumplen regulaciones estrictas (GDPR, HIPAA), suelen tener integración con dispositivos médicos y accesos por múltiples roles (pacientes, médicos, administrativos).</p>
+</li>
+<li>
+<p><strong>Riesgos principales</strong><br />
+  Extremadamente altos. Exposición de datos personales sensibles puede llevar a extorsión, discriminación o daños a la salud si se altera información (por ejemplo cambiando una dosis). También hay riesgos de denegación de servicio que impidan acceso urgente a historiales en emergencias.</p>
+</li>
+</ul>
+<h3 id="aplicaciones-de-redes-sociales-rrss">Aplicaciones de redes sociales (RRSS)</h3>
+<ul>
+<li>
+<p><strong>Características clave</strong><br />
+  Gestionan perfiles de millones de usuarios, contenido generado por usuarios, interacciones en tiempo real, algoritmos de recomendación, anuncios y moderación de contenido.</p>
+</li>
+<li>
+<p><strong>Riesgos principales</strong><br />
+  Altos y variados. Incluyen abuso de cuentas (phishing, bots), difusión masiva de desinformación, acoso y doxxing, fugas masivas de datos (scraping de perfiles), manipulación algorítmica y riesgos de privacidad (geolocalización, metadatos de fotos). Un incidente puede afectar a millones de usuarios rápidamente.</p>
+</li>
+</ul>
+<h2 id="conclusion-personal">Conclusión personal</h2>
+<p>La comparación deja claro que los riesgos de seguridad son proporcionales a tres factores principales:<br />
+- El valor de los datos que se manejan<br />
+- La exposición a usuarios no confiables o a internet<br />
+- La complejidad y las integraciones externas  </p>
+<h4 id="autor">Autor</h4>
+<blockquote>
+<p><strong><em>Daniel Trujillo Martin</em></strong></p>
+</blockquote></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

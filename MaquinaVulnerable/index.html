@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Maquina Vulnerable - UNIDAD2 Tarea Final DANIEL TRUJILLO</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">UNIDAD2 Tarea Final DANIEL TRUJILLO</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../TrazadoVulnerabilidadGoAnywhere/" class="nav-link">Trazado de vulnerabilidad</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Maquina Vulnerable</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../ComprobacionRequisitosAplicacion_Daniel/" class="nav-link">Comprobacion de requisitos de aplicacion</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Conclusiones_Daniel/" class="nav-link">Conclusiones</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../TrazadoVulnerabilidadGoAnywhere/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../ComprobacionRequisitosAplicacion_Daniel/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#maquina-vulnerable-bwapp" class="nav-link">Maquina Vulnerable BWAPP</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="maquina-vulnerable-bwapp">Maquina Vulnerable BWAPP</h1>
+<p>La opcion que escogi es <code>SQL INJECTION (GET/SELECT)</code></p>
+<p><img alt="maquina BWAPP " src="https://raw.githubusercontent.com/vjp-danielTM/Unidad2-TareaRA2-Daniel/refs/heads/main/docs/capturas_Maquina_vulnerabilidad/1.png" /></p>
+<p>Cuando hacemos una consulta vemos que en la url sale la consulta que hace</p>
+<p><img alt="maquina BWAPP " src="https://raw.githubusercontent.com/vjp-danielTM/Unidad2-TareaRA2-Daniel/refs/heads/main/docs/capturas_Maquina_vulnerabilidad/2.png" />
+Con esto sabemos  dos cosas que el fichero que utiliza es <code>sqli_2.php</code> y que haciendo cambios en la url podemos sacar información privada</p>
+<p>Por ejemplo voy a sacar la base de datos que utliza cambiando la url</p>
+<blockquote>
+<p>http://localhost:8001/sqli_2.php?movie=-1 union select 1,database(),3,4,5,6,7 -- &amp;action=go</p>
+</blockquote>
+<p>Con esta parte de la url ?movie=-1 union select 1,database(),3,4,5,6,7 -- &amp;action=go</p>
+<p>UNION SELECT 1, database(), 3, 4, 5, 6, 7 → Añade una fila falsa con estos valores exactos.</p>
+<p>database() → es una función de MySQL que devuelve el nombre de la base de datos actual.</p>
+<p><img alt="maquina BWAPP " src="https://raw.githubusercontent.com/vjp-danielTM/Unidad2-TareaRA2-Daniel/refs/heads/main/docs/capturas_Maquina_vulnerabilidad/3.png" /></p>
+<hr />
+<p>Ahora vamos a comprobar que funcione en los otros niveles
+<img alt="maquina BWAPP " src="https://raw.githubusercontent.com/vjp-danielTM/Unidad2-TareaRA2-Daniel/refs/heads/main/docs/capturas_Maquina_vulnerabilidad/4.png" />
+Vemos que con el nivel medium si funciona</p>
+<p><img alt="maquina BWAPP " src="https://raw.githubusercontent.com/vjp-danielTM/Unidad2-TareaRA2-Daniel/refs/heads/main/docs/capturas_Maquina_vulnerabilidad/5.png" />
+Pero vemos que en el nivel high no</p>
+<hr />
+<p>Vamos a ver el porque, gracias a la url sabemos que sqli_2.php es el fichero que utiliza.
+Desde dentro del contenedor hacemos un cat a sqli_2.php y buscamos donde esta el posible fallo 
+Este cacho de codigo PHP es un fallo de seguridad porque recoge el parámetro movie de la URL con $_GET["movie"], lo concatena en la consulta SQL mediante $sql .= " WHERE id = " . sqli($id), por lo que el valor del usuario entra dentro de la query. La consulta final queda como SELECT * FROM movies WHERE id = (lo que quiera poner dentro de la url), permitiendo que un atacante envíe consultas como 1' OR '1'='1 -- o -1 UNION SELECT ... -- para devolver todos los registros, extraer datos sensible, modificar o borrar información de la base de datos si el usuario tiene los permisos suficientes
+<img alt="maquina BWAPP " src="https://raw.githubusercontent.com/vjp-danielTM/Unidad2-TareaRA2-Daniel/refs/heads/main/docs/capturas_Maquina_vulnerabilidad/6.png" /></p>
+<p>Aqui podemos ver la funcion de los checks que hace en la consulta</p>
+<p><img alt="maquina BWAPP " src="https://raw.githubusercontent.com/vjp-danielTM/Unidad2-TareaRA2-Daniel/refs/heads/main/docs/capturas_Maquina_vulnerabilidad/7.png" /></p>
+<p>Si seguimos subiendo podemos ver los archivos que incluye el fichero y el de functions es el que suena mas convincente para tener los checks donde tenemos <code>no_check</code> y <code>sqli_check_2</code>.</p>
+<p><img alt="maquina BWAPP " src="https://raw.githubusercontent.com/vjp-danielTM/Unidad2-TareaRA2-Daniel/refs/heads/main/docs/capturas_Maquina_vulnerabilidad/8.png" /></p>
+<p>Si buscamos podemos ver que el no_check lo que hace es retornar la data sin ver nada, es decir no hace nada.</p>
+<p><img alt="maquina BWAPP " src="https://raw.githubusercontent.com/vjp-danielTM/Unidad2-TareaRA2-Daniel/refs/heads/main/docs/capturas_Maquina_vulnerabilidad/9.png" /></p>
+<p>Y en sqli_check_2 lo que hace con el <code>mysql_real_escape_string</code> escapa caracteres especiales que podrían romper o alterar una consulta SQL</p>
+<p><img alt="maquina BWAPP " src="https://raw.githubusercontent.com/vjp-danielTM/Unidad2-TareaRA2-Daniel/refs/heads/main/docs/capturas_Maquina_vulnerabilidad/10.png" /></p>
+<h4 id="autor">Autor</h4>
+<blockquote>
+<p><strong><em>Daniel Trujillo Martin</em></strong></p>
+</blockquote></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
